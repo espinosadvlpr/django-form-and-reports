@@ -1,6 +1,6 @@
 # Formulario **"Datos_Asignaturas_Inv"** implementado en Django
 
-Usando datos en un [archivo CSV](https://espinosadvlpr.github.io/Datos_Asignaturas_Inv_U.csv) de una encuesta aplicada a estudiantes de ingenieria se realizo un desarrollo en el lenguaje de programación **Python** usando el framework **Django** para implementar esa misma encuenta ademas de guardar el CSV y los nuevos registros en una base de datos sobre la cual se realizaron 3 reportes, diagrama de barras con los estudiantes que viven en cada ciudad, diagrama de dispersión con la cantidad de estudiantes para grupos de edad y diagrama de dona con el porcentaje de vivienda de los estudiantes.
+Usando datos en un [archivo CSV](https://espinosadvlpr.github.io/Datos_Asignaturas_Inv_U.csv) de una encuesta aplicada a estudiantes de ingenieria se realizo un desarrollo en el lenguaje de programación **Python** usando el framework **Django** para implementar esa misma encuenta ademas de guardar el CSV y los nuevos registros en una base de datos. Dentro del proyecto se realizo la creación de reportes usando la libreria [Highcharts](https://www.highcharts.com/) para paginas web, en este momento el dashboard cuenta con 3 reportes: diagrama de barras con los estudiantes que viven en cada ciudad, diagrama de dispersión con la cantidad de estudiantes para grupos de edad y diagrama de dona con el porcentaje de vivienda de los estudiantes.
 
 ## Requisitos de ejecución del proyecto
 
