@@ -1,0 +1,188 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="{%static 'lib/highcharts-10.2.0/code/highcharts.js'%}"></script>
+    <script src="{%static 'lib/highcharts-10.2.0/code/modules/exporting.js'%}"></script>
+    <script src="{%static 'lib/highcharts-10.2.0/code/modules/export-data.js'%}"></script>
+    <script src="{%static 'lib/highcharts-10.2.0/code/modules/pattern-fill.js'%}"></script>
+    <script src="{%static 'lib/highcharts-10.2.0/code/modules/accessibility.js'%}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div style="background: #E5ECF3;"class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Dashboard de reportes</h1>
+                <div class="container" id="barChart"></div>
+                <br>
+                <div class="container" id="lineChart"></div>
+                <br>
+                <div class="container" id="donutChart"></div>
+
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript">
+        Highcharts.chart('donutChart', {
+            colors: ['#01BAF2', '#71BF45', '#FAA74B', '#B37CD2'],
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Reporte de vivienda de estudiantes'
+            },
+            tooltip: {
+                valueSuffix: '%'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {y} %'
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Percentage',
+                colorByPoint: true,
+                innerSize: '75%',
+                data: [{
+                    name: 'Familia primaria',
+                    y: 33.95
+                }, {
+                    name: 'Mamá',
+                    y: 10.52
+                }, {
+                    name: 'Papá',
+                    y: 0
+                }, {
+                    name: 'Hermanos',
+                    y: 8.9
+                }, {
+                    name: 'Familia secundaria',
+                    y: 5.8
+                }, {
+                    name: 'Familia primaria y secundaria',
+                    y: 0
+                },{
+                    name: 'Solo',
+                    y: 40.73
+                }]
+            }]
+        });
+
+        Highcharts.chart("lineChart", {
+            title: {
+                text: "Cantidad de estudiantes por edad"
+            },
+        
+            subtitle: {
+                text:
+                'Reporte de dispersion'
+            },
+        
+            yAxis: {
+                title: {
+                    text: "Cantidad de estudiantes"
+                }
+            },
+        
+            xAxis: {
+                title: { text: "Edades" },
+                category: [18,19,20,21],
+                accessibility: {
+                    rangeDescription: "Range: 20 to 60"
+                }
+            },
+        
+            legend: {
+                enabled: false
+            },
+        
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false
+                    },
+                    pointStart: 18,
+                    pointInterval: 1
+                }
+            },
+        
+            series: [
+                {
+                    name: "Estudiantes",
+                    data: {{report_ages|safe}}
+                }
+            ]
+        });
+        
+
+        Highcharts.chart('barChart', {
+            chart: {
+                type: 'column',
+                zoomType: 'y'
+            },
+            title: {
+                text: 'Grafico de estudiantes por ciudad'
+            },
+            subtitle: {
+                text:
+                'Reporte de columnas'
+            },
+            xAxis: {
+                categories: ['Barbosa','Chiquinquira','Cucuta','Duitama','Paipa','Samaca','Tunja','Ventaquemada'],
+                title: {
+                    text: null
+                },
+                accessibility: {
+                    description: 'Cantidad:'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            plotOptions: {
+                column: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            tooltip: {
+                valueSuffix: ' estudiantes',
+                stickOnContact: true,
+                borderColor: '#555',
+                backgroundColor: 'rgba(255, 255, 255, 0.93)'
+            },
+            legend: {
+                enabled: true
+            },
+            series: [
+                {
+                    name: 'Estudiantes',
+                    data: {{city_report|safe}},
+                    showInLegend: false,
+                    colorByPoint: true,
+                }
+            ]
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

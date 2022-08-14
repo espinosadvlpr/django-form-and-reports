@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 0;
+    margin: 0 auto;
+    background: #E5ECF3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+.description {
+    font-style: italic;
+    font-size: 1em;
+    margin: 0px 15px 40px 15px;
+}
+
+.form {
+    background-color: white;
+    width: 75%;
+    height: 70%;
+    border-radius: 1%;
+    margin-bottom: 60px;
+}
+
+.survey-form {
+    padding: 15px 10px 0px 10px;
+    text-align: left;
+}
+
+.form-group {
+    display: block;
+    justify-content: center;
+    margin: 20px 30px 20px 30px;
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="textarea"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    height: 30px;
+    color: gray;
+    margin-top: 10px;
+}
+
+select {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    color: gray;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="textarea"]::placeholder,
+input[type="email"]::placeholder,
+input[type="date"]::placeholder,
+option {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 90px;
+    color: gray;
+}
+
+.button-submit {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background: #37af65;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 0;
+    color: white;
+}
+
+.radio-input,
+.checkbox-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-input input,
+.checkbox-input input {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .form{
+        width: 95%;
+    }
+  }
