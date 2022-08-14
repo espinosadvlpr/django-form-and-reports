@@ -24,7 +24,7 @@ $ pip install -r requirements.txt
 Edite la configuración de usuario y contraseña de `MySQL` para la conexion de la base de datos en la linea 82 del archivo `django_form/settings.py`
 
 
-NOTA: Para que el ejercicio funcione correctamente en MySQL debe tener creada la base de datos `gestion_datos` si esta no se encuentra creada debe ejecutar el comando 
+**NOTA: Para que el ejercicio funcione correctamente en MySQL debe tener creada la base de datos `gestion_datos` si esta no se encuentra creada debe ejecutar el comando**
 
 ```
 create database gestion_datos;
