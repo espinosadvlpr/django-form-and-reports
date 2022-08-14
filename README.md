@@ -11,19 +11,24 @@ Para poder ejecutar correctamente el proyecto es necesario tener instalando `Pyt
 
 Realice la clonación del repositorio usando el comando
 
-`
+```
 $ https://github.com/espinosadvlpr/django-form-and-reports.git
-`
+```
 
 Realice la instalación de las librerias necesarias para la ejecución del proyecto usando el comando
 
-`
+```
 $ pip install -r requirements.txt
-`
+```
 
 Edite la configuración de usuario y contraseña de `MySQL` para la conexion de la base de datos en la linea 82 del archivo `django_form/settings.py`
 
-`NOTA: En su base de datos MySQL debe ejecutar el comando **create database gestion_datos;** para que el ejercicio funcione correctamente.`
+
+NOTA: Para que el ejercicio funcione correctamente en MySQL debe tener creada la base de datos `gestion_datos` si esta no se encuentra creada debe ejecutar el comando 
+
+```
+create database gestion_datos;
+```
 
 Una vez cambiada la información para la conexión a la base de datos y las librerias necesarias esten instaladas, debe realizar lo siguiente para la migración de las tablas a la base de datos `gestion_datos` creada previamente en **MySQL**
 
@@ -36,15 +41,15 @@ Para realizar la inserción de los datos, edite la configuración de usuario y c
 
 Ejecutando el script con el siguiente comando se realizara la inserción de los datos en **MySQL**
 
-`
+```
 $ python insert_data_db.py
-`
+```
 
 Para ejecutar el proyecto de **Django** debe usar el siguiente comando
 
-`
+```
 $ python manage.py runserver
-`
+```
 
 ## Navegando por el proyecto
 
@@ -56,9 +61,9 @@ Si desea revisar los datos subidos al proyecto lo puede realizar desde el `admin
 
 Primero cree un usuario administrador con el comando
 
-`
+```
 $ python manage.py createsuperuser
-`
+```
 
 Una vez creado el usuario, para ingresar al `admin` en el navegador ingrese el siguiente link <http://127.0.0.1:8000/admin> en el apartado `Surveys` como se ve en la imagen
 
