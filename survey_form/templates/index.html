@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Datos_Asignaturas_Inv</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1 class="title" id="title">Datos_Asignaturas_Inv</h1>
+            <p class="description" id="description">
+                Por favor, responda las siguientes preguntas con sinceridad. Los datos escritos en el formulario serán tratados con ética y confidencialidad. 
+            </p>
+        </div>
+        <div class="form">
+            <form action="." method="post" class="survey-form" id="survey-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="lastname" id="lastname-label">Escriba Apellidos. </label><input type="text" name="user-lastname" id="lastname"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="name" id="name-label">Escriba Nombres.   </label><input type="text" name="user-name" id="name"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject" id="subject-label">Escriba el nombre de la asignatura que actualmente esta cursando. </label><input type="text" name="user-subject" id="subject"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject-grade" id="subjectgrade-label">Escriba la nota obtenida en el primer 50%. </label><input type="text" name="subject-grade" id="subject-grade"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="weight" id="weight-label">Escriba su peso. (Ejemplo 65.5) </label><input type="text" name="user-weight" id="weight"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="height" id="height-label">Escriba su altura. (Ejemplo 1.65) </label><input type="text" name="user-height" id="height"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="age" id="age-label">Escriba su edad. </label><input type="number" name="user-age" id="age"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="date" id="date-label">Escriba la fecha de su nacimiento. </label><input type="date" name="user-birthdate" id="date"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <label for="city" id="city-label">Escriba el nombre de la ciudad donde vive actualmente. </label><input type="text" name="city-age" id="city"
+                        placeholder="Tu respuesta" required />
+                </div>
+                <div class="form-group">
+                    <p>¿Actualmente con quien vive?</p>
+                    <select name="live-with" id="dropdown" required>
+                        <option disabled selected value>Seleccione una opción</option>
+                        <option value="first-family">Mamá, papá, hermanos (Familia primaria)</option>
+                        <option value="dad">Papá</option>
+                        <option value="mom">Mamá</option>
+                        <option value="brother">Hermanos</option>
+                        <option value="second-family">Familia secundaria (primos, tios, abuelos)</option>
+                        <option value="second-first-family">Familia primaria y secundaria</option>
+                        <option value="alone">Vivo sol@ (habitación, residencia universitaria)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>¿Cuantas veces a la semana hace actividad física? (desde caminar a paso rápido durante mas de una hora hasta practicar algún deporte)</p>
+                    <select name="practice-sport" id="dropdown" required>
+                        <option disabled selected value>Seleccione una opción</option>
+                        <option value="sport-one-two">Una o dos veces por semana</option>
+                        <option value="sport-three-four">Tres o cuatro veces por semana</option>
+                        <option value="sport-plus-four">Mas de cuatro veces por semana</option>
+                        <option value="none-sport">No hago deporte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>¿Cuantas horas duerme al dia?</p>
+                    <select name="sleep-hours" id="dropdown" required>
+                        <option disabled selected value>Seleccione una opción</option>
+                        <option value="sleep-four-hours">4 horas o menos</option>
+                        <option value="sleep-five-hours">5 horas</option>
+                        <option value="sleep-six-hours">6 horas</option>
+                        <option value="sleep-seven-hours">7 horas</option>
+                        <option value="sleep-eight-hours">8 horas o mas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>¿Cuantas horas toma en su día a día para actividades extra? (baile, yoga, pintura, etc).</p>
+                    <select name="extra-activity-space" id="dropdown" required>
+                        <option disabled selected value>Seleccione una opción</option>
+                        <option value="extra-one-hour">1 hora a la semana</option>
+                        <option value="extra-two-hour">2 horas a la semana</option>
+                        <option value="extra-plustwo-hour">entre 2 y 5 horas a la semana</option>
+                        <option value="extra-plusfive-hour">5 o mas horas a la semana</option>
+                        <option value="none-extra">no tengo tiempo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="button-submit" type="submit" id="submit">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
