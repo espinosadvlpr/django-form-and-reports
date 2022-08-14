@@ -10,7 +10,7 @@ for indice in range(len(dataFrame)):
 
 tableName = "survey_data_csv"
 sqlEngine = create_engine(
-    'mysql+pymysql://root:a1d2m3i4n@127.0.0.1/gestion_datos', pool_recycle=3600)
+    'mysql+pymysql://<usuario>:<contraseña>@127.0.0.1/gestion_datos', pool_recycle=3600)
 dbConnection = sqlEngine.connect()
 
 try:
