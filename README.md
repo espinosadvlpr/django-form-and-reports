@@ -47,6 +47,7 @@ $ python manage.py runserver
 ## Navegando por el proyecto
 
 Para ingresar al formulario en el navegador ingrese el siguiente link <http://127.0.0.1:8000/>
+
 Para ingresar al dashboard de reportes en el navegador ingrese el siguiente link <http://127.0.0.1:8000/dashboard>
 
 Si desea revisar los datos subidos al proyecto lo puede realizar desde el `admin`
