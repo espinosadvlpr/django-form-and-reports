@@ -9,7 +9,7 @@ Para poder ejecutar correctamente el proyecto es necesario tener instalando `Pyt
 
 ## Instalando el proyecto
 
-Realice la clonación del repositorio usando el comando
+Realice la clonación del repositorio usando el comando [Como clonar un repositorio](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ```
 $ https://github.com/espinosadvlpr/django-form-and-reports.git
