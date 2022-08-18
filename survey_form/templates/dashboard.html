@@ -55,28 +55,7 @@
                 name: 'Percentage',
                 colorByPoint: true,
                 innerSize: '75%',
-                data: [{
-                    name: 'Familia primaria',
-                    y: 33.95
-                }, {
-                    name: 'Mamá',
-                    y: 10.52
-                }, {
-                    name: 'Papá',
-                    y: 0
-                }, {
-                    name: 'Hermanos',
-                    y: 8.9
-                }, {
-                    name: 'Familia secundaria',
-                    y: 5.8
-                }, {
-                    name: 'Familia primaria y secundaria',
-                    y: 0
-                },{
-                    name: 'Solo',
-                    y: 40.73
-                }]
+                data: {{report_lives|safe}}
             }]
         });
 
