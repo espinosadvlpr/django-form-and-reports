@@ -4,7 +4,7 @@ Usando datos en un [archivo CSV](https://espinosadvlpr.github.io/Datos_Asignatur
 
 ## Requisitos de ejecución del proyecto
 
-Para poder ejecutar correctamente el proyecto es necesario tener instalando `Python`, ademas de un servidor de bases de datos como `MySQL o MariaDB`.
+Para poder ejecutar correctamente el proyecto es necesario tener instalando `Python`, ademas de un servidor de bases de datos como `[MySQL](https://dev.mysql.com/downloads/workbench/) o MariaDB`.
 
 
 ## Instalando el proyecto
