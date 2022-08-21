@@ -6,6 +6,10 @@ Usando datos en un [archivo CSV](https://espinosadvlpr.github.io/Datos_Asignatur
 
 Para poder ejecutar correctamente el proyecto es necesario tener instalando `Python`, ademas de un servidor de bases de datos como **[MySQL](https://dev.mysql.com/downloads/workbench/)** o `MariaDB`.
 
+## Tutorial de instalación
+
+Para ver el tutorial en formato de video para la instalación del proyecto tiene la opción de verlo en **[Youtube](https://youtu.be/jcvU0Xyj5KU)** o descargar el video de **[Drive](https://drive.google.com/file/d/19PnkjZtcQsaln4dAs39KFPBuwGreVDE0/view?usp=sharing)**
+
 
 ## Instalando el proyecto
 
